@@ -1,0 +1,116 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+/* Root variables */
+:root {
+  --color-primary: #2563EB;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #64748B;
+  --color-secondary-foreground: #FFFFFF;
+  --color-background: #F8FAFC;
+  --color-foreground: #1E293B;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1E293B;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1E293B;
+  --color-muted: #F1F5F9;
+  --color-muted-foreground: #64748B;
+  --color-accent: #059669;
+  --color-accent-foreground: #FFFFFF;
+  --color-success: #10B981;
+  --color-success-foreground: #FFFFFF;
+  --color-warning: #F59E0B;
+  --color-warning-foreground: #FFFFFF;
+  --color-error: #EF4444;
+  --color-error-foreground: #FFFFFF;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-input: #E2E8F0;
+  --color-ring: #2563EB;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #64748B;
+  --shadow-sm: 0px 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0px 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0px 10px 15px rgba(0,0,0,0.1);
+  --shadow-xl: 0px 20px 25px rgba(0,0,0,0.15);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    @apply font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  p {
+    color: var(--color-text-primary);
+  }
+
+  small, .text-small {
+    color: var(--color-text-secondary);
+  }
+
+  /* Apply border color by default */
+  * {
+    border-color: var(--color-border);
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  /* Backgrounds */
+  .bg-background { background-color: var(--color-background); }
+  .bg-card { background-color: var(--color-card); }
+  .bg-popover { background-color: var(--color-popover); }
+
+  /* Text */
+  .text-foreground { color: var(--color-foreground); }
+  .text-primary { color: var(--color-primary); }
+  .text-secondary { color: var(--color-secondary); }
+
+  /* Borders */
+  .border-border { border-color: var(--color-border); }
+  .border-input { border-color: var(--color-input); }
+
+  /* Shadows */
+  .shadow-educational { box-shadow: var(--shadow-sm); }
+  .shadow-educational-md { box-shadow: var(--shadow-md); }
+  .shadow-educational-lg { box-shadow: var(--shadow-lg); }
+  .shadow-educational-xl { box-shadow: var(--shadow-xl); }
+
+  /* Animations */
+  .pulse-gentle { animation: pulse-gentle 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+  .slide-up { animation: slide-up 200ms cubic-bezier(0.4,0,0.2,1); }
+
+  @keyframes pulse-gentle {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Transitions */
+  .transition-educational { transition: all var(--transition-fast); }
+  .transition-educational-normal { transition: all var(--transition-normal); }
+  .transition-educational-slow { transition: all var(--transition-slow); }
+}
