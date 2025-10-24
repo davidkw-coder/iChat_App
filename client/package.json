@@ -25,6 +25,7 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@dhiwise/component-tagger": "^1.0.10",
     "@eslint/js": "^9.36.0",
     "@tailwindcss/postcss": "^4.1.16",
     "@types/react": "^19.1.16",
@@ -37,7 +38,8 @@
     "globals": "^16.4.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14",
-    "vite": "npm:rolldown-vite@7.1.14"
+    "vite": "npm:rolldown-vite@7.1.14",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "pnpm": {
     "overrides": {
