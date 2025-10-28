@@ -1,0 +1,45 @@
+{
+  // Visit https://aka.ms/tsconfig to learn more about this file
+  "compilerOptions": {
+    /* === Basic Project Structure === */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* === Language & Module Targeting === */
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    /* === React Support === */
+    "jsx": "react-jsx", // Enables TSX for React 17+
+    "types": ["react", "react-dom"],
+
+    /* === Type Checking Options === */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* === Module Resolution === */
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": false,
+    "isolatedModules": true,
+
+    /* === Output Control === */
+    "sourceMap": true,
+    "declaration": false,         // Not needed for React apps
+    "declarationMap": false,      // Disable unless you're publishing packages
+    "noEmit": true,               // Don’t emit compiled JS files, React handles that
+
+    /* === Performance === */
+    "skipLibCheck": true,
+
+    /* === File Detection === */
+    "moduleDetection": "force",
+    "allowJs": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
